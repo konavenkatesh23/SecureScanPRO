@@ -1,0 +1,9 @@
+Flask
+Flask-Bcrypt
+requests
+beautifulsoup4
+selenium
+reportlab
+mysql-connector-python
+gunicorn
+Werkzeug
