@@ -1,0 +1,129 @@
+{% extends "layout.html" %}
+
+{% block title %}New Scan | SecureScanPRO{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+
+    <div class="row">
+
+        <!-- Sidebar -->
+
+        <div class="col-lg-2 p-0">
+
+            {% include "sidebar.html" %}
+
+        </div>
+
+        <!-- Main Content -->
+
+        <div class="col-lg-10 p-4">
+
+            <div class="card shadow border-0 rounded-4">
+
+                <div class="card-header bg-primary text-white">
+
+                    <h3>
+                        <i class="bi bi-search"></i>
+
+                        New Vulnerability Scan
+                    </h3>
+
+                </div>
+
+                <div class="card-body p-4">
+
+                    <form
+                        action="{{ url_for('scan.start_scan') }}"
+                        method="POST">
+
+                        <div class="mb-4">
+
+                            <label class="form-label">
+
+                                Target Website URL
+
+                            </label>
+
+                            <input
+                                type="url"
+                                class="form-control form-control-lg"
+                                name="target_url"
+                                placeholder="https://example.com"
+                                required>
+
+                        </div>
+
+                        <div class="mb-4">
+
+                            <label class="form-label">
+
+                                Scan Type
+
+                            </label>
+
+                            <select
+                                class="form-select form-select-lg"
+                                name="scan_type">
+
+                                <option value="Quick">
+
+                                    Quick Scan
+
+                                </option>
+
+                                <option value="Full" selected>
+
+                                    Full Scan
+
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="alert alert-info">
+
+                            <strong>Quick Scan</strong>
+
+                            <ul>
+                                <li>Website Crawl</li>
+                                <li>Endpoint Discovery</li>
+                                <li>Security Header Scan</li>
+                            </ul>
+
+                            <strong>Full Scan</strong>
+
+                            <ul>
+                                <li>Everything in Quick Scan</li>
+                                <li>SQL Injection Scan</li>
+                                <li>XSS Detection</li>
+                                <li>CVSS Analysis</li>
+                                <li>PDF Report</li>
+                            </ul>
+
+                        </div>
+
+                        <button
+                            class="btn btn-primary btn-lg">
+
+                            <i class="bi bi-play-circle-fill"></i>
+
+                            Start Scan
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

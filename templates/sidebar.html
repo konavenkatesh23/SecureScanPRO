@@ -1,0 +1,51 @@
+<div class="bg-dark text-white vh-100 p-3">
+
+    <h3 class="mb-4">
+        SecureScanPRO
+    </h3>
+
+    <div class="list-group">
+
+        <a
+            href="{{ url_for('dashboard.dashboard') }}"
+            class="list-group-item list-group-item-action">
+
+            Dashboard
+
+        </a>
+
+        <a
+            href="{{ url_for('scan.scan') }}"
+            class="list-group-item list-group-item-action active">
+
+            New Scan
+
+        </a>
+
+        <a
+            href="{{ url_for('reports.history') }}"
+            class="list-group-item list-group-item-action">
+
+            Scan History
+
+        </a>
+
+        <a
+            href="{{ url_for('reports.history') }}"
+            class="list-group-item list-group-item-action">
+
+            Reports
+
+        </a>
+
+        <a
+            href="{{ url_for('auth.logout') }}"
+            class="list-group-item list-group-item-action">
+
+            Logout
+
+        </a>
+
+    </div>
+
+</div>

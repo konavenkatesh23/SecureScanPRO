@@ -1,0 +1,526 @@
+/* ==========================================
+   SecureScan Pro - Industrial Theme
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    overflow-x:hidden;
+}
+
+/* ==========================================
+   Login & Register
+========================================== */
+
+.login-left{
+
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:80px;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.login-left::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+
+    height:450px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    top:-100px;
+
+    left:-120px;
+}
+
+.login-left::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+
+    height:350px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.06);
+
+    bottom:-120px;
+
+    right:-80px;
+}
+
+.login-overlay{
+
+    position:relative;
+
+    z-index:10;
+
+    max-width:520px;
+}
+
+.login-overlay h1{
+
+    font-size:56px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+}
+
+.login-overlay h4{
+
+    color:#dbeafe;
+
+    margin-bottom:25px;
+}
+
+.login-overlay p{
+
+    color:#e2e8f0;
+
+    line-height:1.9;
+
+    margin-bottom:40px;
+
+    font-size:17px;
+}
+
+.feature-box{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+}
+
+.feature-box div{
+
+    background:rgba(255,255,255,.12);
+
+    padding:18px;
+
+    border-radius:15px;
+
+    transition:.3s;
+
+    backdrop-filter:blur(8px);
+}
+
+.feature-box div:hover{
+
+    transform:translateY(-5px);
+
+    background:rgba(255,255,255,.20);
+}
+
+.feature-box i{
+
+    color:#22c55e;
+
+    font-size:22px;
+
+    margin-right:10px;
+}
+
+.login-right{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#f8fafc;
+
+    padding:40px;
+}
+
+.login-card{
+
+    width:430px;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:45px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.15);
+}
+
+.login-card h2{
+
+    font-size:40px;
+
+    font-weight:700;
+
+    color:#0f172a;
+}
+
+.form-control{
+
+    height:52px;
+
+    border-radius:12px;
+}
+
+.form-control:focus{
+
+    box-shadow:none;
+
+    border-color:#2563eb;
+}
+
+.login-btn{
+
+    height:52px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    font-size:17px;
+}
+
+.login-btn:hover{
+
+    transform:translateY(-2px);
+
+    transition:.3s;
+}
+
+/* ==========================================
+   Dashboard
+========================================== */
+
+.sidebar{
+
+    width:270px;
+
+    min-height:100vh;
+
+    background:#0f172a;
+
+    color:white;
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    padding-top:25px;
+}
+
+.logo{
+
+    text-align:center;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    margin-bottom:40px;
+}
+
+.logo i{
+
+    color:#22c55e;
+
+    margin-right:8px;
+}
+
+.nav-links{
+
+    list-style:none;
+
+    padding:0;
+}
+
+.nav-links li{
+
+    margin:8px 18px;
+}
+
+.nav-links li a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    text-decoration:none;
+
+    color:#cbd5e1;
+
+    padding:14px 18px;
+
+    border-radius:12px;
+
+    transition:.3s;
+}
+
+.nav-links li a:hover{
+
+    background:#2563eb;
+
+    color:white;
+}
+
+.nav-links li.active a{
+
+    background:#2563eb;
+
+    color:white;
+}
+
+.main-content{
+
+    margin-left:270px;
+
+    width:calc(100% - 270px);
+
+    padding:35px;
+}
+
+/* ==========================================
+   Navbar
+========================================== */
+
+.top-navbar{
+
+    background:white;
+
+    padding:20px 30px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+    margin-bottom:30px;
+}
+
+.user-info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+}
+
+.notification{
+
+    font-size:24px;
+
+    color:#2563eb;
+
+    cursor:pointer;
+}
+
+.profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-weight:600;
+}
+
+.profile i{
+
+    font-size:30px;
+
+    color:#2563eb;
+}
+
+/* ==========================================
+   Welcome
+========================================== */
+
+.welcome-box{
+
+    margin-bottom:35px;
+}
+
+.welcome-box h2{
+
+    font-weight:700;
+
+    color:#0f172a;
+}
+
+.welcome-box p{
+
+    color:#64748b;
+}
+
+/* ==========================================
+   Statistics Cards
+========================================== */
+
+.stat-card{
+
+    border-radius:18px;
+
+    padding:28px;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.stat-card:hover{
+
+    transform:translateY(-6px);
+}
+
+.stat-card h6{
+
+    opacity:.9;
+}
+
+.stat-card h2{
+
+    font-size:38px;
+
+    margin-top:10px;
+}
+
+.stat-card i{
+
+    font-size:48px;
+}
+
+.blue{
+
+    background:#2563eb;
+}
+
+.red{
+
+    background:#ef4444;
+}
+
+.green{
+
+    background:#22c55e;
+}
+
+.yellow{
+
+    background:#f59e0b;
+}
+
+/* ==========================================
+   Activity Table
+========================================== */
+
+.activity-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.activity-card h4{
+
+    font-weight:700;
+}
+
+.table{
+
+    margin-top:20px;
+}
+
+.table thead{
+
+    background:#eff6ff;
+}
+
+.table th{
+
+    color:#334155;
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media(max-width:992px){
+
+.sidebar{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:auto;
+}
+
+.main-content{
+
+    margin-left:0;
+
+    width:100%;
+}
+
+.login-left{
+
+    display:none !important;
+}
+
+.login-card{
+
+    width:100%;
+}
+
+}
